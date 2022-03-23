@@ -33,6 +33,18 @@ function App() {
     ]));
   };
 
+  const addAppointment = (title, contact, date, hour) => {
+    setAppointments(prev => ([
+      ...prev,
+      {
+        title: title,
+        contact: contact,
+        date: date,
+        hour: hour
+      }
+    ]));
+  };
+
   return (
     <>
       <nav>
