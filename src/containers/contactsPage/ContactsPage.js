@@ -15,6 +15,17 @@ export const ContactsPage = ({contacts, addContact}) => {
     Add contact info and clear data
     if the contact name is not a duplicate
     */
+    const newName =e.target.value;
+    const isDuplicate = contacts.find(contact => contact.name === newName);
+
+    if (!isDuplicate) {
+      addContact(name, phone, email);
+      setName('');
+      setPhone(0);
+      setEmail('');
+    } else {
+      alert('The name already exists, change it!');
+    }
   };
 
   /*
