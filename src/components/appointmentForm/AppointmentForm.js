@@ -1,4 +1,5 @@
 import React from "react";
+import {ContactPicker} from '../contactPicker/ContactPicker';
 
 export const AppointmentForm = ({
   contacts,
@@ -51,6 +52,8 @@ export const AppointmentForm = ({
         //onChange={}
         required
       />
+      <ContactPicker />
+      <input type='submit' value='Submit' />
     </form>
   );
 };
