@@ -8,7 +8,7 @@ export const ContactsPage = ({contacts, addContact}) => {
   contact info and duplicate check
   */
  const {name, setName} = useState('');
- const {phone, setPhone} = useState(0);
+ const {phone, setPhone} = useState('');
  const {email, setEmail} = useState('');
 
   const handleSubmit = (e) => {
