@@ -26,26 +26,27 @@ export const AppointmentForm = ({
     <form onSubmit={handleSubmit}>
       <label for='title'>enter a Title for the appointment:</label>
       <input 
-        value=''
+        value={title}
         type='text'
         name="title"
         id="title"
-        onChange={handleChangeTitle}
+        //onChange={handleChangeTitle}
         placeholder='title'
         required
       />
       <label for='date'>select a Date for the appointment:</label>
       <input 
-        value=''
+        value={date}
         type='date'
         name="date"
         id="date"
         //onChange={}
+        min={getTodayString}
         required
       />
       <label for='hour'>select an Hour for the appointment:</label>
       <input 
-        value=''
+        value={hour}
         type='time'
         name="hour"
         id="hour"
