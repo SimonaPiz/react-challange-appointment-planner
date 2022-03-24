@@ -5,7 +5,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
   Define state variables for 
   appointment info
   */
- const {title, seTitle} = useState('');
+ const {title, setTitle} = useState('');
  const {contact, setContact} = useState({});
  const {date, setDate} = useState(null);
  const {hour, setHour} = useState(null);
@@ -15,7 +15,11 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
     /*
     Add contact info and clear data  
     */
-   
+    addAppointment(title, contact, date, hour);
+    setTitle('');
+    setContact({});
+    setDate(null);
+    setHour(null);   
   };
 
   return (
