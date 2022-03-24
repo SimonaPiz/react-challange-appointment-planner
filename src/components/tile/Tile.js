@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Tile = () => {
+export const Tile = ({contact}) => {
   return (
     <div className="tile-container">
       
