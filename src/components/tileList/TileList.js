@@ -2,6 +2,9 @@ import React from "react";
 import { Tile } from "../tile/Tile";
 
 export const TileList = ({contacts}) => {
+  if (contacts[0]) {
+    return <div>&nbsp;</div>;
+  }
   return (
     <div>
       {contacts.map(contact => {
