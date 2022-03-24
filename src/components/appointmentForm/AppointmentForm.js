@@ -53,7 +53,10 @@ export const AppointmentForm = ({
         //onChange={}
         required
       />
-      <ContactPicker />
+      <ContactPicker 
+        handleChange={handleChange}
+        contacts={contacts}
+      />
       <input type='submit' value='Submit' />
     </form>
   );
