@@ -10,6 +10,14 @@ export const ContactForm = ({
   handleSubmit
 }) => {
   return (
-    ContactForm
+    <form onSubmit={handleSubmit}>
+      <label for='username'>User Name:</label>
+      <input 
+        value={name}
+        type='text'
+        name="username"
+        id="username"
+      />
+    </form>
   );
 };
