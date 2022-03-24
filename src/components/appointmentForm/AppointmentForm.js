@@ -8,8 +8,8 @@ export const AppointmentForm = ({
   setContact,
   date,
   setDate,
-  time,
-  setTime,
+  hour,
+  setHour,
   handleSubmit
 }) => {
   const getTodayString = () => {
@@ -20,6 +20,8 @@ export const AppointmentForm = ({
   };
 
   return (
-    AppointmentForm
+    <form onSubmit={handleSubmit}>
+
+    </form>
   );
 };
