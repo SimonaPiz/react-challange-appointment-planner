@@ -19,9 +19,38 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
+  const handleChangeTitle = ({target}) => setTitle(target.value);
+
   return (
     <form onSubmit={handleSubmit}>
-
+      <label for='title'>enter a Title for the appointment:</label>
+      <input 
+        value=''
+        type='text'
+        name="title"
+        id="title"
+        onChange={handleChangeTitle}
+        placeholder='title'
+        required
+      />
+      <label for='date'>select a Date for the appointment:</label>
+      <input 
+        value=''
+        type='date'
+        name="date"
+        id="date"
+        //onChange={}
+        required
+      />
+      <label for='hour'>select an Hour for the appointment:</label>
+      <input 
+        value=''
+        type='time'
+        name="hour"
+        id="hour"
+        //onChange={}
+        required
+      />
     </form>
   );
 };
