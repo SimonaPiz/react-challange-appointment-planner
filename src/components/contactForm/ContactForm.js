@@ -18,6 +18,21 @@ export const ContactForm = ({
         name="username"
         id="username"
       />
+      <label for='phone'>Phone Number:</label>
+      <input 
+        value={phone}
+        type='tel'
+        name="phone"
+        id="phone"
+      />
+      <label for='email'>User email:</label>
+      <input 
+        value={email}
+        type='email'
+        name="email"
+        id="email"
+      />
+      <input type='submit' value='Submit'/>
     </form>
   );
 };
