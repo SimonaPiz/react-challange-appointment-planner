@@ -29,7 +29,7 @@ export const AppointmentForm = ({
 
   return (
     <form onSubmit={handleSubmit}>
-      <label for='title'>enter a Title for the appointment:</label>
+      <label htmlFor='title'>enter a Title for the appointment:</label>
       <input 
         value={title}
         type='text'
@@ -39,7 +39,7 @@ export const AppointmentForm = ({
         placeholder='title'
         required
       />
-      <label for='date'>select a Date for the appointment:</label>
+      <label htmlFor='date'>select a Date for the appointment:</label>
       <input 
         value={date}
         type='date'
@@ -49,7 +49,7 @@ export const AppointmentForm = ({
         min={getTodayString}
         required
       />
-      <label for='hour'>select an Hour for the appointment:</label>
+      <label htmlFor='hour'>select an Hour for the appointment:</label>
       <input 
         value={hour}
         type='time'

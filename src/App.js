@@ -5,36 +5,29 @@ import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage
 import { ContactsPage } from "./containers/contactsPage/ContactsPage";
 
 function App() {
-  /*
-  Define state variables for 
-  contacts and appointments 
-  */
- const {contacts, setContacts} = useState([{
-   name: 'Maria',
-   phone: '023-291836',
-   email: 'maria@gmail.com'
- }]);
- const {appointments, setAppointments} = useState([]);
+
+ const [contacts, setContacts] = useState([{
+  name: 'Maria',
+  phone: '023-291836',
+  email: 'maria@gmail.com'
+}]);
+ 
+ const [appointments, setAppointments] = useState([]);
 
   const ROUTES = {
     CONTACTS: "/contacts",
     APPOINTMENTS: "/appointments",
   };
 
-  /*
-  Implement functions to add data to
-  contacts and appointments
-  */
-
   const addContact = (name, phone, email) => {
-    setContacts(prev => ([
-      ...prev,
+    setContacts([
+      ...contacts,
       {
         name: name,
         phone: phone,
-        email: email
+        email: email,
       }
-    ]));
+    ]);
   };
 
   const addAppointment = (title, contact, date, hour) => {
@@ -44,7 +37,7 @@ function App() {
         title: title,
         contact: contact,
         date: date,
-        hour: hour
+        hour: hour,
       }
     ]));
   };

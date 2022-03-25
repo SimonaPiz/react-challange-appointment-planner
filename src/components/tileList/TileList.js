@@ -1,16 +1,16 @@
 import React from "react";
 import { Tile } from "../tile/Tile";
 
-export const TileList = ({contacts}) => {
-  const contacsList = () => {
-    contacts.map(contact => {
-      return <Tile contact={contact}/>;
-    })
-  }
-
+export const TileList = ({tiles}) => {
   return (
     <div>
-      {contacsList}
+      {!tiles ? <p>Loading..</p> : (
+        <div>
+          {tiles.map((tile, index) => (
+            <Tile key={index} tile={tile}/>
+          ))}   
+        </div>     
+      )}
     </div>
   );
 };
