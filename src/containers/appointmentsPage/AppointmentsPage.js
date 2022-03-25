@@ -2,26 +2,26 @@ import React, { useState } from "react";
 import {AppointmentForm} from '../../components/appointmentForm/AppointmentForm';
 import { TileList } from "../../components/tileList/TileList";
 
-export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
-  /*
-  Define state variables for 
-  appointment info
-  */
- const {title, setTitle} = useState('');
- const {contact, setContact} = useState({});
- const {date, setDate} = useState(null);
- const {hour, setHour} = useState(null);
+export const AppointmentsPage = ({
+  appointments, 
+  contacts, 
+  addAppointment
+}) => {
+ const [title, setTitle] = useState('');
+ const [contact, setContact] = useState(
+   contacts.length > 0 ? contacts[0].name : ''
+ );
+ const [date, setDate] = useState('');
+ const [hour, setHour] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-    Add contact info and clear data  
-    */
+    
     addAppointment(title, contact, date, hour);
     setTitle('');
-    setContact({});
-    setDate(null);
-    setHour(null);   
+    setContact('');
+    setDate('');
+    setHour('');   
   };
 
   return (
@@ -40,7 +40,7 @@ export const AppointmentsPage = ({appointments, contacts, addAppointment}) => {
       <hr />
       <section>
         <h2>Appointments</h2>
-        <TileList appointments={appointments}/>
+        <TileList tiles={appointments}/>
       </section>
     </div>
   );

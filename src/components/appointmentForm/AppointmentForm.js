@@ -20,12 +20,9 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
-  const handleChange = ({target}) => { 
-    const {name, value} = target;
-    setContact({
-      [name]: value
-    });
-  }
+  const getContactNames = () => { 
+    return contacts.map((contact) => contact.name);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -35,7 +32,7 @@ export const AppointmentForm = ({
         type='text'
         name="title"
         id="title"
-        //onChange={handleChangeTitle}
+        onChange={({target}) => setTitle(target.value)}
         placeholder='title'
         required
       />
@@ -45,8 +42,8 @@ export const AppointmentForm = ({
         type='date'
         name="date"
         id="date"
-        //onChange={}
-        min={getTodayString}
+        onChange={({target}) => setDate(target.value)}
+        htmlmin={getTodayString()}
         required
       />
       <label htmlFor='hour'>select an Hour for the appointment:</label>
@@ -55,16 +52,17 @@ export const AppointmentForm = ({
         type='time'
         name="hour"
         id="hour"
-        //onChange={}
+        onChange={({target}) => setHour(target.value)}
         required
       />
-      <label for="contact">Choose a contact:</label>
+      <label htmlFor="contact">Choose a contact:</label>
       <ContactPicker 
-        handleChange={handleChange}
-        contacts={contacts}
-        contact={contact}
+        name='contact'
+        onChange={({target}) => setContact(target.value)}
+        contacts={getContactNames()}
+        value={contact}
       />
-      <input type='submit' value='Submit' />
+      <input type='submit' value='Add Appointment' />
     </form>
   );
 };
