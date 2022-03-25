@@ -20,7 +20,12 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
-  const handleChangeTitle = ({target}) => setTitle(target.value);
+  const handleChange = ({target}) => { 
+    const {name, value} = target;
+    setContact({
+      [name]: value
+    });
+  }
 
   return (
     <form onSubmit={handleSubmit}>
@@ -53,7 +58,12 @@ export const AppointmentForm = ({
         //onChange={}
         required
       />
-      <ContactPicker />
+      <label for="contact">Choose a contact:</label>
+      <ContactPicker 
+        handleChange={handleChange}
+        contacts={contacts}
+        contact={contact}
+      />
       <input type='submit' value='Submit' />
     </form>
   );
