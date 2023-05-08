@@ -1,6 +1,18 @@
 #  App Appointment planner
 > React challange from codecademy
 
+Here is a working live demo []()
+
+![anteprima](https://user-images.githubusercontent.com/91121660/236813120-fa076efe-5570-4292-9756-1f45a583331d.png)
+![anteprima02](https://user-images.githubusercontent.com/91121660/236813239-602fe82e-bb91-41fe-96e8-e538acd26375.png)
+
+
+## Table of contents
+* [About this project](#about-this-project)
+* [Objective](#objective)
+* [Technologies](#technologies)
+* [Setup](#setup)
+
 ## Project Goals
 In this project, you will use functional React components to create an app that manages contacts and appointments. 
 
