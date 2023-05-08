@@ -9,11 +9,11 @@ Here is a working live demo []()
 
 ## Table of contents
 * [About this project](#about-this-project)
-* [Objective](#objective)
+* [Project Goals](#project-goals)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
-## Project Goals
+## About this project
 In this project, you will use functional React components to create an app that manages contacts and appointments. 
 
 The app consists of two pages: 
@@ -23,6 +23,28 @@ The app consists of two pages:
 ![image](https://user-images.githubusercontent.com/91121660/159671891-ceab55ad-aba4-43e8-a3e7-1d9d789de35f.png)
 
 You will work with stateful and stateless functional React components using hooks.
+
+### Components
+
+- App
+    - ContactsPage
+        - ContactForm
+        - TileList
+            - Tile
+    - AppointmentsPage
+        - ApointmentForm
+        - TileList
+            - Tile
+
+## Project Goals
+
+The application code starts with
+
+- App.js
+- ContactsPage.js
+- AppointmentsPage.js
+
+These are the three stateful components you will work with in this project.
 
 ## Prerequisites
 To complete this project, you should have completed the Codecademy lessons from Learn React including:
@@ -36,3 +58,17 @@ To complete this project, you should have completed the Codecademy lessons from 
 - Advanced React
 - Hooks
 - React Forms
+
+## Technologies
+- React 17
+- React Router 5
+
+## Setup
+To run this project, install it locally using npm:
+```
+$ cd ../[directory]
+$ npm install
+$ npm start
+```
+## License
+MIT
