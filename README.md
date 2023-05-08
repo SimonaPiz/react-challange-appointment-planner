@@ -18,6 +18,9 @@ To complete this project, you should have completed the Codecademy lessons from 
 - JSX
 - React Components
 - Components Interacting
+- React Programming Patterns
+- React Styles
 - Stateless Components From Stateful Components
 - Advanced React
 - Hooks
+- React Forms
